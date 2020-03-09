@@ -32,7 +32,7 @@ function displayClock(startTime) {
     clockHours = (hours<10) ? '0'+hours : hours;
     clockMins = (mins<10) ? '0'+mins : mins;
     clockS = (s<10) ? '0'+s : s;
-    clockMs = (ms<10) ? '0'+ms : ms;
+    clockMs = (ms<10) ? '00'+ms : (ms<100) ? '0'+ms : ms;
 
     clock.textContent = clockHours + ':' + clockMins + ':' + clockS + '.' + clockMs;
 }
